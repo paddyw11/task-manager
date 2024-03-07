@@ -2,19 +2,29 @@
 
 Welcome Paddy Walsh,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+on entering do cmd - pip3 install 'Flask-SQLAlchemy<3' psycopg2 sqlalchemy==1.4.46
 
+
+to add db - cmd - set_pg
+                - psql
+                - CREATE DATABASE 'name of database'
+                - \c 'name of database'
+                - \q
+
+                - python3 
+                - from 'name of database' import db
+                - db.create_all()
+
+ you can check by using following cmds
+                - psql -d 'name of database'
+                - \dt
+                - \q - to exit
+
+ dont forge to add - app.app_context().push() underneath app.confi in init file
 ## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
 
 To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
