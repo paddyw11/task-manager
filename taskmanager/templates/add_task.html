@@ -22,12 +22,38 @@
                 <label for="task_description">Task Description</label>
             </div>
         </div>
-        <!-- tdue date -->
+        <!-- task_due_date -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
                 <textarea id="due_date" name="due_date" type="text" class="datepicker validate" required></textarea>
                 <label for="due_date">Due Date</label>
+            </div>
+        </div>
+        <!-- is_urgent -->
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
+                    <label for="is_urgent">                      
+                      <input id="is_urgent" name="is_urgent" type="checkbox">
+                      <span class="lever"></span>
+                      Is Urgent
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- category id -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <select id="category_id" name="category_id" class="validate" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_id">Category</label>
             </div>
         </div>
         <!-- submit button -->

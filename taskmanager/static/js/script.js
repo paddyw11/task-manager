@@ -8,4 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
       format: "dd mmmm, yyyy",
       i18n: {done: "Select"}
     });
+
+    // select initilization
+    let selects = document.querySelectorAll('select');
+    M.FormSelect.init(selects);
   });
